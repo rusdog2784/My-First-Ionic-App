@@ -1,0 +1,77 @@
+
+<ion-header>
+  <ion-navbar>
+  	<button class='close' ion-button clear (click)="done()">Close</button>
+    <ion-title>{{data["AssetDetails:assetName"]}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="overflow-x: hidden !important;">
+	<div class="info-box" [ngSwitch]="more_info_selection">
+		
+		<div class="key-information" *ngSwitchCase="'key_information'">
+			<h3>Key Information</h3>
+			<table class="table">
+				<tr *ngFor="let info of infoToDisplay">
+					<th>{{info.title}}</th>
+					<td>{{info.value}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="contacts" *ngSwitchCase="'contacts'">
+			<h3>Contacts</h3>
+			<div #left class="left-side">
+				<ion-slides pager>
+					<ion-slide>
+
+						<table>
+							<tr>
+								<th>{{leftSideTitle}}</th>
+							</tr>
+							<tr *ngFor="let contact of contacts">
+								<td>{{contact[leftSideTitle]}}</td>
+							</tr>
+						</table>
+
+					</ion-slide>
+				</ion-slides>
+			</div>
+
+			<div #right class="right-side">
+				<ion-slides pager>
+					<ion-slide *ngFor="let title of rightSideTitles">
+						<table>
+							<tr>
+								<th>{{title}}</th>
+							</tr>
+							<tr *ngFor="let contact of contacts">
+								<td>{{contact[title]}}</td>
+							</tr>
+						</table>
+					</ion-slide>
+				</ion-slides>
+			</div>
+		</div>
+
+		<div class="other" *ngSwitchCase="'other'">
+			<h3>Other</h3>
+			<nvd3 [options]="sunburstOptions" [data]="sunburstData"></nvd3>
+		</div>
+
+	</div>
+	<div class="info-buttons" padding>
+		<ion-segment [(ngModel)]="more_info_selection">
+			<ion-segment-button value="key_information" (click)="updateInfo('AssDet')">
+				<ion-icon name="settings"></ion-icon>
+			</ion-segment-button>
+			<ion-segment-button value="contacts">
+				<ion-icon name="contacts"></ion-icon>
+			</ion-segment-button>
+			<ion-segment-button value="other">
+				<ion-icon name="pie"></ion-icon>
+			</ion-segment-button>
+		</ion-segment>
+	</div>
+</ion-content>
+s

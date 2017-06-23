@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Results</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="search-bar">
+    <ion-searchbar (ionInput)="searchItem($event)"></ion-searchbar>
+  </div>
+
+  <div class="card-div">
+    <ion-list>
+      <ion-card class="card" ion-item *ngFor="let x of displayData" (click)="moreInfo(x)">
+        <ion-card-header class='title'>{{x['AssetDetails:productType']}}: {{x['AssetDetails:productClass']}}</ion-card-header>
+        <ion-icon class='results-icon' name='{{x["AssetDetails:icon"]}}'></ion-icon>
+        <ion-card-content class='content'>
+          <h3>Asset Name:</h3>
+          <p>{{x['AssetDetails:assetName']}}</p>
+          <br>
+          <h3>Asset Tag:</h3>
+          <p>{{x['AssetDetails:assetTag']}}</p>
+          <br>
+          <h3>Inventory No:</h3>
+          <p>{{x['AssetDetails:invNo']}}</p>
+          <br>
+          <h3>Serial No:</h3>
+          <p>{{x['AssetDetails:serialNo']}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
+</ion-content>

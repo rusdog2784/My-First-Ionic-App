@@ -1,0 +1,164 @@
+ion-content .scroll-content{
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.close {
+	color: white;
+}
+
+.info-box {
+	min-height: 85%;
+	max-height: 85%;
+	margin: 10px 5px 10px 5px;
+	//background-color: rgba(0, 0, 0, 0.1);
+	overflow: scroll;
+}
+
+.key-information, .contacts, .other {
+	width: 100%;
+	height: 100%;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+//Key Information
+.key-information {
+	
+}
+
+.key-information table {
+	width: 93%;
+}
+
+.key-information tr {
+	border: 1px solid black;
+	height: 30px;
+}
+
+.key-information th {
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 10px;
+	background-color: rgba(0,71,123, 0.8);
+	color: white;
+}
+
+.key-information td {
+	text-align: right;
+	padding-right: 5px;
+	padding-left: 5px;
+	background-color: rgba(0,71,123, 0.1);
+}
+//---------------------------
+
+//Contacts
+.contacts {
+
+}
+
+.left-side {
+	position: relative;
+	float: left;
+	width: 40%;
+	//border: 1px solid black;
+}
+
+.left-side table, th, td {
+	width: 100%;
+	border: 1px solid black;
+}
+
+.left-side table {
+	border-collapse: collapse;
+	//width: 100%;
+	font-size: 1.5rem;
+}
+
+.left-side tr {
+	text-align: left;
+	height: 50px;
+}
+
+.left-side th {
+	text-align: center;
+	background-color: rgba(0,71,123, 0.8);
+	color: white;
+}
+
+.left-side td {
+	padding-left: 5px;
+	background-color: rgba(0,71,123, 0.1);
+}
+
+.right-side {
+	position: relative;
+	float: right;
+	width: 60%;
+}
+
+.right-side table, th, td {
+	width: 100%;
+	border: 1px solid black;
+}
+
+.right-side table {
+	border-collapse: collapse;
+	//width: 100%;
+	font-size: 1.5rem;
+}
+
+.right-side tr {
+	text-align: center;
+	height: 50px;
+	word-break: break-all;
+}
+
+.right-side th {
+	background-color: rgba(0,71,123, 0.8);
+	color: white;
+}
+
+.right-side td {
+	background-color: rgba(0,71,123, 0.1);
+}
+
+.swiper-pagination {
+	bottom: 0px !important;
+}
+//---------------------------
+
+
+//Other
+.other {
+
+}
+
+.nvtooltip {
+	position: absolute;
+  background-color: white;
+  padding: 1px;
+  margin-top: 80px;
+  width: 100%;
+}
+//---------------------------
+
+.info-buttons {
+	min-height: 15%;
+	margin-bottom: 5px;
+}
+
+.segment-button {
+	height: 4.2rem !important;
+	border-color: #00477B !important;
+}
+
+.segment-button ion-icon {
+	font-size: 3.6rem !important;
+	line-height: 4.0rem !important;
+	//color: #00477B;
+}
+
+.segment-button.segment-activated {
+	background-color: #00477B !important;
+}

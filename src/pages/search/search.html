@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="assets/img/chase.png" width="35px" style="display:inline-block; margin-top: 1px;" height="35px"/>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="search-criteria" [hidden]="hideCriteria" (click)="openMenu()">
+    <p>&#x25bc; {{searchCriteria}}</p>
+  </div>
+	<div class="search-content">
+		<ion-input class="search-input" type="text" placeholder="Enter your search" [(ngModel)]="searchText"></ion-input>
+		<button class="search-button" ion-button block (click)="search(searchText)">Search</button>
+	</div>
+</ion-content>

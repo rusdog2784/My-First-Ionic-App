@@ -1,0 +1,50 @@
+data = [
+  {
+    "name": "Mccray",
+    "gender": "male",
+    "relationTo": "Frazier",
+    "phone": "+1 (839) 487-2404",
+    "email": "mccrayfrazier@exozent.com",
+    "status": "alive"
+  },
+  {
+    "name": "Tisha",
+    "gender": "female",
+    "relationTo": "Floyd",
+    "phone": "+1 (900) 571-2220",
+    "email": "tishafloyd@exozent.com",
+    "status": "dead"
+  },
+  {
+    "name": "Madelyn",
+    "gender": "female",
+    "relationTo": "Harrell",
+    "phone": "+1 (932) 528-3487",
+    "email": "madelynharrell@exozent.com",
+    "status": "dead"
+  },
+  {
+    "name": "Janie",
+    "gender": "female",
+    "relationTo": "Roman",
+    "phone": "+1 (910) 436-2576",
+    "email": "janieroman@exozent.com",
+    "status": "alive"
+  },
+  {
+    "name": "Kemp",
+    "gender": "male",
+    "relationTo": "Cain",
+    "phone": "+1 (903) 441-2323",
+    "email": "kempcain@exozent.com",
+    "status": "alive"
+  },
+  {
+    "name": "Cohen",
+    "gender": "male",
+    "relationTo": "Crane",
+    "phone": "+1 (974) 427-2021",
+    "email": "cohencrane@exozent.com",
+    "status": "dead"
+  }
+]

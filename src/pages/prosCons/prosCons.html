@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img src="assets/img/chase.png" width="35px" style="display:inline-block; margin-top: 1px;" height="35px"/>
+    <ion-title>Pros & Cons</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-segment [(ngModel)]="pros_cons">
+    <ion-segment-button value="pros">
+      Pros
+    </ion-segment-button>
+    <ion-segment-button value="cons">
+      Cons
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="pros_cons">
+    <ion-list *ngSwitchCase="'pros'">
+      <ion-item *ngFor="let pro of pros">
+        <p class="pro">• {{pro}}</p>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'cons'">
+      <ion-item *ngFor="let con of cons">
+        <p class="con">• {{con}}</p>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <button ion-button secondary menuToggle>Toggle Menu</button>
+</ion-content>
